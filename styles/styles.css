@@ -292,6 +292,7 @@ body {
 	.article__img {
 		max-width: 360px;
 		border-radius: 5px;
+		margin-bottom: 0;
 	}
 
 }
@@ -381,7 +382,7 @@ body {
 	.article__img {
 		max-width: 531px;
 		border-radius: 5px;
-		margin-bottom: 49px;
+		margin-bottom: 0;
 	}
 
 }
