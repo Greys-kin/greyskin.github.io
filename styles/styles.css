@@ -49,12 +49,22 @@ body {
 	margin-bottom: 24px;
 	background-color: #fff;
 	border-bottom: 1px solid #D9FFF5;
+	gap: 16px;
+	padding-inline: 16px;
 }
 
 .upper-menu {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+.upper-menu__logo {
+	background-image: url(../img/logo.svg);
+	width: 96px;
+	height: 51px;
+	background-size: cover;
+	margin-right: auto;
 }
 
 .upper-menu__divider2 {
@@ -109,12 +119,12 @@ body {
 	display: none;
 }
 
-.container__side-menu {
+.container__slide-menu {
 	margin-bottom: 24px;
 	padding-inline: 16px;
 }
 
-.container__side-menu::after {
+.container__slide-menu::after {
 	content: url('../img/fade.svg');
 	display: inline-block;
 	text-align: right;
@@ -122,7 +132,7 @@ body {
 	right: 0;
 }
 
-.side-menu {
+.slide-menu {
 	font-size: 16px;
 	font-weight: 500;
 	display: flex;
@@ -133,13 +143,14 @@ body {
 	scrollbar-width: none;
 }
 
-.side-menu__link {
+.slide-menu__link {
 	box-sizing: border-box;
 	padding: 8px;
 	padding-inline: 16px;
+	border: 2px solid transparent;
 }
 
-.side-menu__link--active {
+.slide-menu__link--active {
 	border: 2px solid #B8FFEC;
 	border-radius: 6px;
 	background-color: #fff;
@@ -169,6 +180,10 @@ body {
 	font-weight: 500;
 	margin-bottom: 16px;
 	align-self: flex-start;
+	background-color: transparent;
+	border: none;
+	font-family: 'TT Lakes';
+	font-size: 16px;
 
 }
 
@@ -182,18 +197,55 @@ body {
 }
 
 .article__img {
+	background-image: url(../img/MG3223.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
 	width: 100vw;
-	border-radius: 0;
+	aspect-ratio: 320 / 176;
+	background-size: cover;
 	margin-bottom: 35px;
 }
 
+button {
+	background-color: transparent;
+	border: none;
+	font-family: 'TT Lakes';
+	font-size: 16px;
+}
 
+.slide-menu__link:hover {
+	border: 2px solid #B8FFEC;
+	border-radius: 6px;
+}
+
+.upper-menu > a:hover, 
+.upper-menu > button:hover, 
+.content__link-more:hover, 
+.title__link-repair:hover, 
+.title__link-checkstatus:hover {
+	filter: brightness(0.7);
+}
+
+.slide-menu a {
+	color: #7E7E82;
+	text-decoration: none;
+}
+
+.title__link-repair, .title__link-checkstatus {
+	color: black;
+	text-decoration: none;
+}
 
 
 @media (min-width: 768px) {
 
 	body {
 		line-height: 20px;
+	}
+
+	.header__upper-menu {
+		gap: 20px;
+		padding-inline: 20px;
 	}
 
 	.upper-menu__divider {
@@ -203,7 +255,6 @@ body {
 	.upper-menu__divider2 {
 		display: block;
 		order: -5;
-		margin-right: 20px;
 	}
 
 	.upper-menu__logo {
@@ -212,37 +263,29 @@ body {
 
 	.upper-menu__link-call {
 		display: block;
+		padding-inline: 0;
 	}
 
 	.upper-menu__link-chat {
 		display: block;
-		margin-left: 20px;
 	}
 
 	.upper-menu__link-profile {
 		display: block;
-		margin-left: 20px;
 	}
 
 	.upper-menu__link-burger {
-		margin-inline: 20px;
 	}
 
 	.upper-menu__link-repair {
-		margin-left: 40px;
+		padding-inline: 0;
 	}
-
-	.upper-menu__link-repair::before {
-		content: url('../img/divider.svg');
-		position: absolute;
-		width: 2px;
-		height: 32px;
-		margin-left: -20px;
-		margin-top: 4px;
+	
+	.upper-menu__divider {
+		display: block;
 	}
 
 	.upper-menu__link-checkstatus {
-		margin-inline: 20px;
 	}
 
 	.title__name {
@@ -253,17 +296,9 @@ body {
 		margin-left: -24px;
 	}
 
-	.container__side-menu {
+	.container__slide-menu {
 		margin-bottom: 24px;
 		padding-inline: 24px;
-	}
-
-	.side-menu__link:nth-child(3) {
-		display: block;
-	}
-
-	.side-menu__link:nth-child(5) {
-		display: block;
 	}
 
 	.article__container {
@@ -291,6 +326,7 @@ body {
 
 	.article__img {
 		max-width: 360px;
+		aspect-ratio: 360 / 208;
 		border-radius: 5px;
 		margin-bottom: 0;
 	}
@@ -344,20 +380,20 @@ body {
 		line-height: 24px;
 	}
 
-	.side-menu__link:nth-child(4) {
+	.slide-menu__link:nth-child(4) {
 		display: block;
 	}
 
-	.side-menu__link:nth-child(6) {
+	.slide-menu__link:nth-child(6) {
 		display: block;
 	}
 
-	.side-menu {
+	.slide-menu {
 		flex-wrap: wrap;
 		
 	}
 
-	.container__side-menu {
+	.container__slide-menu {
 		margin-bottom: 16px;
 	}
 
@@ -381,6 +417,7 @@ body {
 
 	.article__img {
 		max-width: 531px;
+		aspect-ratio: 531 / 307;
 		border-radius: 5px;
 		margin-bottom: 0;
 	}
