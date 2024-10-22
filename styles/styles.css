@@ -94,7 +94,7 @@ body {
 	background-size: contain;
 }
 
-.upper-menu__link-chat {
+.upper-menu__button-chat {
 	display: none;
 }
 
@@ -326,7 +326,7 @@ button {
 		background-size: contain;
 	}
 
-	.upper-menu__link-chat {
+	.upper-menu__button-chat {
 		display: block;
 		background-image: url(../img/chat.svg);
 		background-repeat: no-repeat;
